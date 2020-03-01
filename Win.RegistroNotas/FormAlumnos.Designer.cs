@@ -32,9 +32,9 @@
             System.Windows.Forms.Label cursoLabel;
             System.Windows.Forms.Label idLabel;
             System.Windows.Forms.Label nombreLabel;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAlumnos));
             System.Windows.Forms.Label anioLabel;
             System.Windows.Forms.Label numeroIdentidadLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAlumnos));
             this.listaAlumnosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.listaAlumnosBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
@@ -91,6 +91,24 @@
             nombreLabel.Size = new System.Drawing.Size(47, 13);
             nombreLabel.TabIndex = 7;
             nombreLabel.Text = "Nombre:";
+            // 
+            // anioLabel
+            // 
+            anioLabel.AutoSize = true;
+            anioLabel.Location = new System.Drawing.Point(12, 158);
+            anioLabel.Name = "anioLabel";
+            anioLabel.Size = new System.Drawing.Size(29, 13);
+            anioLabel.TabIndex = 9;
+            anioLabel.Text = "Año:";
+            // 
+            // numeroIdentidadLabel
+            // 
+            numeroIdentidadLabel.AutoSize = true;
+            numeroIdentidadLabel.Location = new System.Drawing.Point(12, 106);
+            numeroIdentidadLabel.Name = "numeroIdentidadLabel";
+            numeroIdentidadLabel.Size = new System.Drawing.Size(108, 13);
+            numeroIdentidadLabel.TabIndex = 9;
+            numeroIdentidadLabel.Text = "Numero de identidad:";
             // 
             // listaAlumnosBindingSource
             // 
@@ -261,15 +279,6 @@
             this.nombreTextBox.TabIndex = 1;
             this.nombreTextBox.Tag = "1";
             // 
-            // anioLabel
-            // 
-            anioLabel.AutoSize = true;
-            anioLabel.Location = new System.Drawing.Point(12, 158);
-            anioLabel.Name = "anioLabel";
-            anioLabel.Size = new System.Drawing.Size(29, 13);
-            anioLabel.TabIndex = 9;
-            anioLabel.Text = "Año:";
-            // 
             // anioTextBox
             // 
             this.anioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaAlumnosBindingSource, "Anio", true));
@@ -278,15 +287,6 @@
             this.anioTextBox.Size = new System.Drawing.Size(252, 20);
             this.anioTextBox.TabIndex = 4;
             this.anioTextBox.Tag = "4";
-            // 
-            // numeroIdentidadLabel
-            // 
-            numeroIdentidadLabel.AutoSize = true;
-            numeroIdentidadLabel.Location = new System.Drawing.Point(12, 106);
-            numeroIdentidadLabel.Name = "numeroIdentidadLabel";
-            numeroIdentidadLabel.Size = new System.Drawing.Size(108, 13);
-            numeroIdentidadLabel.TabIndex = 9;
-            numeroIdentidadLabel.Text = "Numero de identidad:";
             // 
             // numeroIdentidadTextBox
             // 
@@ -316,6 +316,7 @@
             this.Controls.Add(this.listaAlumnosBindingNavigator);
             this.Name = "FormAlumnos";
             this.Text = "Alumnos";
+            this.Load += new System.EventHandler(this.FormAlumnos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.listaAlumnosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaAlumnosBindingNavigator)).EndInit();
             this.listaAlumnosBindingNavigator.ResumeLayout(false);

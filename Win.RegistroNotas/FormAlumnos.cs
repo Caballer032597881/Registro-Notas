@@ -37,6 +37,7 @@ namespace Win.RegistroNotas
             {
                 listaAlumnosBindingSource.ResetBindings(false);
                 DesahilitarHabilitarBotones(true);
+                MessageBox.Show("Producto Guardado");
             }
             else
             {
@@ -98,6 +99,11 @@ namespace Win.RegistroNotas
         {
             DesahilitarHabilitarBotones(true);
             Eliminar(0);
+        }
+
+        private void FormAlumnos_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
